@@ -1,0 +1,26 @@
+#include <iostream>
+
+int main() 
+{
+    const size_t N = 4;
+    int matrix[N][N] = {};
+
+    std::cout << "Enter a " << N << " by " << N << " matrix row by row: \n";
+
+    for ( size_t i = 0; i < N; i++ )
+    {
+        std::cout << "Enter row " << i << ": ";
+        for ( size_t j = 0; j < N; j++ ) std::cin >> matrix[i][j];
+    }
+
+    long long int sum = 0;
+
+    for ( size_t i = 0; i < N; i++ )
+    {
+        for ( size_t j = 0; j < N; j++ ) sum += matrix[i][j];
+    }
+
+    std::cout << "Sum of the matrix is " << sum << std::endl;
+
+    return 0;
+}
